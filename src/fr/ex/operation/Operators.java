@@ -24,6 +24,8 @@ public class Operators {
 
 	public static void main(String[] args) {
 		
+		
+		// Tests
 		System.out.println("Result of 5 + 2: " + add(5, 2));
 		System.out.println("Result of 5 - 2: " + sub(5, 2));
 		System.out.println("Result of 3 / 0: " + divide(3, 0));
