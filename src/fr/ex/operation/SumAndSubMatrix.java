@@ -10,6 +10,10 @@ public class SumAndSubMatrix {
 		int rows = A.length;
 		int cols = A[0].length;
 		
+		if (B.length != rows || B[0].length != cols) {
+            throw new IllegalArgumentException("Matrixes must be the same shape!");
+        }
+		
 		int[][] result = new int[rows][cols];
 		
 		for (int i = 0; i < rows; i++) {
@@ -28,6 +32,10 @@ public class SumAndSubMatrix {
 		// then it returns the result:
 		int rows = A.length;
 		int cols = A[0].length;
+		
+		if (B.length != rows || B[0].length != cols) {
+            throw new IllegalArgumentException("Matrixes must be the same shape!");
+        }
 		
 		int[][] result = new int[rows][cols];
 		
