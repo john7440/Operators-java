@@ -33,5 +33,8 @@ tous les éléments d’une matrice par une valeur donné:
 
         java MultiplyMatrixByScalar
 
+### 6. 6.7 : Ecrire un programme java qui met en œuvre la notion de factorielle telle que n ! = n*(n-1) …*1
+
+        java Recursive
         
 
