@@ -3,13 +3,20 @@ package fr.ex.operation;
 // Question 6.4 and 6.5
 public class SumAndSubMatrix {
 	
+    /**
+     * Adds two matrices of the same dimensions.
+     * Each element in the result is the sum of corresponding elements from A and B.
+     *
+     * @param A the first matrix
+     * @param B the second matrix
+     * @return a new matrix containing the element-wise sum
+     */
 	public static int[][] addMatrices(int[][] A, int[][] B){
-		// This method take 2 matrix (same shape!!) and 
-		// add each rows to the other one (the same row),
-		// then it returns the result:
+		
 		int rows = A.length;
 		int cols = A[0].length;
 		
+		// We first check if both matrices have the same shape
 		if (B.length != rows || B[0].length != cols) {
             throw new IllegalArgumentException("Matrixes must be the same shape!");
         }
@@ -26,13 +33,20 @@ public class SumAndSubMatrix {
 		return result;
 	}
 	
+	 /**
+     * Subtracts matrix B from matrix A, assuming both have the same dimensions.
+     * Each element in the result is the difference of corresponding elements from A and B.
+     *
+     * @param A the first matrix
+     * @param B the second matrix
+     * @return a new matrix containing the element-wise difference
+     */
 	public static int[][] subMatrices(int[][] A, int[][] B){
-		// This method take 2 matrix (same shape!!) and 
-		// Subtract each rows to the other one (the same row),
-		// then it returns the result:
+	
 		int rows = A.length;
 		int cols = A[0].length;
 		
+		// We first check if both matrices have the same shape
 		if (B.length != rows || B[0].length != cols) {
             throw new IllegalArgumentException("Matrixes must be the same shape!");
         }
@@ -49,9 +63,14 @@ public class SumAndSubMatrix {
 		return result;
 	}
 	
+	  /**
+     * Prints the contents of a matrix in a readable format.
+     * Each row is printed on a new line, with values separated by commas.
+     *
+     * @param matrix the matrix to print
+     */
 	public static void printMatrix(int[][] matrix) {
-		// This method is made to display the matrix to make
-		// it easy to read:
+
 		for (int[] row: matrix) {
 			for (int value : row) {
 				System.out.print(value + ", ");
@@ -61,9 +80,8 @@ public class SumAndSubMatrix {
 	}
 
 	public static void main(String[] args) {
-		// This is the main method, we initialize 2 matrix
-		// and perform different operations on them (add, sub):
-
+		
+		// This is the main method, we initialize 2  sample matrices
 		int[][] matrix1 = {
 				{1, 2, 0},
 				{4, 3, -1}
@@ -74,10 +92,12 @@ public class SumAndSubMatrix {
 				{1, 3, 4}
 		};
 		
+		// Then perform addition and display the result
 		int[][] newMatrixAdd = addMatrices(matrix1, matrix2);
 		System.out.println("Result of matrix1 + matrix2:");
 		printMatrix(newMatrixAdd);
 		
+		// Perform subtraction and display the result
 		int[][] newMatrixSub = subMatrices(matrix1, matrix2);
 		System.out.println("\nResult of matrix1 - matrix2:");
 		printMatrix(newMatrixSub);
